@@ -18,7 +18,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see Resource
  */
 @SpringBootTest(classes = ClientApp.class)
-public class ResourceIT {
+public class RestControllerIT {
 
     private MockMvc restMockMvc;
 

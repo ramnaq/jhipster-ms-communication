@@ -13,10 +13,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * Test class for the HelloServerResource REST controller.
  *
- * @see HelloServerResource
+ * @see RestController
  */
 @SpringBootTest(classes = ServerApp.class)
-public class HelloServerResourceIT {
+public class RestControllerIT {
 
     private MockMvc restMockMvc;
 
@@ -24,9 +24,9 @@ public class HelloServerResourceIT {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
 
-        HelloServerResource helloServerResource = new HelloServerResource();
+        RestController restController = new RestController();
         restMockMvc = MockMvcBuilders
-            .standaloneSetup(helloServerResource)
+            .standaloneSetup(restController)
             .build();
     }
 

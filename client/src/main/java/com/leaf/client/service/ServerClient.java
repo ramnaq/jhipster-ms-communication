@@ -1,8 +1,8 @@
 package com.leaf.client.service;
 
-import com.netflix.hystrix.config.HystrixConfiguration;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 /**
@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.*;
  *      like providing a BasicAuthRequestInterceptor bean, with specific "user" and "password".
  * contextId = used differ FeignClients with different configurations, but that calls the same service
  */
-@FeignClient(name = "server", url = "http://localhost:8020",  decode404 = true)
+@FeignClient(name = "server", url = "http://localhost:8020")
 public interface ServerClient {
 
     @GetMapping(value = "/server/hello")
-    String sayHello(@RequestParam("clientName") String clientName);
+    String sayHello(@RequestParam("name") String name);
 
 }
