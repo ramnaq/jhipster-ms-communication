@@ -30,7 +30,8 @@ After this you should have client and server running respectively on ports
 Now simply perform a GET request to `/client/serverHello` passing a `name`
 parameter.
 
-```bash [client] $ curl http://localhost:8010/client/serverHello?name=Salazar
+```bash
+[client] $ curl http://localhost:8010/client/serverHello?name=Salazar
 ```
 
 The response should be: `What's up, Salazar! Server speaking`.
